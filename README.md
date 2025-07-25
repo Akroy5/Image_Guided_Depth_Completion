@@ -84,12 +84,14 @@ Where:
 ---
 
 ## 📂 Dataset Structure
+```text
 DATA/
 ├── nyudepthv2/
 │ ├── images/ # RGB frames
 │ ├── depth_sparse/ # Projected LIDAR
 │ └── depth_gt/ # Ground truth dense maps
 └── kitti
+```
 ---
 
 ## 🛠️ How to Run
