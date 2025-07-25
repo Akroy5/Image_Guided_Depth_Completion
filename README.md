@@ -60,6 +60,7 @@ The **BerHu loss** (Reverse Huber) is a hybrid between L1 and L2 loss — robust
 Where:
     e = y_pred - y_true
     c = (1/5) × max(|e|) over a batch
+```
 ---
 
 ## 📊 Results
