@@ -1,0 +1,8 @@
+# Ignore dataset and results
+DATA/
+RESULTS/
+__pycache__/
+*.pth
+*.log
+*.csv
+*.npz
