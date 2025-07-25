@@ -17,6 +17,7 @@
 ---
 
 ## 🧠 Architecture Overview
+```text
 Input (RGB + Sparse LIDAR)
 ↓
 Early Fusion
@@ -27,7 +28,8 @@ Skip Connections
 ↓
 Residual Up-Projection Blocks × 4
 ↓
-Conv → Dense Depth Output (1 channel) --- 
+Conv → Dense Depth Output (1 channel) 
+```
 ---
 
 ## ⚙️ Hyperparameters
