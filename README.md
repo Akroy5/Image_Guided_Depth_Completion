@@ -47,21 +47,19 @@ Conv → Dense Depth Output (1 channel) ---
 
 ---
 
-## 🔬 BerHu Loss Function (ℒ<sub>BerHu</sub>)
 
-The **BerHu** loss (Reverse Huber) combines L1 and L2 norms:
+### 🔬 BerHu Loss Function (ℒ₍berhu₎)
 
-\[
-ℒ_{berhu}(e) =
-\begin{cases}
-|e| & \text{if } |e| \le c \\
-\frac{e^2 + c^2}{2c} & \text{if } |e| > c
-\end{cases}
-\]
+The **BerHu loss** (Reverse Huber) is a hybrid between L1 and L2 loss — robust for sparse depth regression. It behaves like L1 loss for small errors and L2 loss for large errors.
 
-Where \( e = y_{pred} - y_{true} \) and \( c = \frac{1}{5} \cdot \max(|e|) \).  
-This loss balances robustness and smooth convergence, especially on sparse ground truths.
+```text
+ℒ₍berhu₎(e) =
+    |e|                  if |e| ≤ c
+    (e² + c²) / (2c)     if |e| > c
 
+Where:
+    e = y_pred - y_true
+    c = (1/5) × max(|e|) over a batch
 ---
 
 ## 📊 Results
